@@ -117,7 +117,6 @@ img {
 /* header */
 #templatemo_header {
 	clear: both;
-	width: 960px;
 	height: 285px;
 	padding: 0;
 	margin: 0;
@@ -366,9 +365,9 @@ main.bookdetails {
 	margin: 0 0 0 -300px;
 	position: relative;
 	animation-name: slide_animation;
-	animation-duration: 33s;
+	animation-duration: 20s;
 	animation-iteration-count: infinite;
-	animation-direction: alternate;
+	animation-direction:alternate;
 	animation-play-state: running;
 
 }
