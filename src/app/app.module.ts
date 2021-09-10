@@ -56,12 +56,3 @@ export class AppModule { }
 
 
 
-
-
-// const appRoutes: Routes = [
-
-//   {path:'', component: HomeComponent},
-//   {path:'home', component:HomeComponent},
-//   {path:'details', component:IdComponent},
-//   {path:'addpage', component:AddBookComponent}
-// ];
