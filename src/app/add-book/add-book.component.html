@@ -1,0 +1,195 @@
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="home">
+            <a routerLink="/" class="homelink">< Back to Home Page</a>
+        </div>
+        <br>
+        <div class="icon-left">
+        </div>
+     <div style="background-color: #583B19;">
+        <form [formGroup]="bookForm">
+            <div class="header">
+                <h5>Add new book</h5>
+            </div>
+          
+            <div class="add">
+                <div class="book-input">
+                    
+                    <div class="firstsection">
+                    <div class="control">
+                        <p>ID:</p>
+                        <div class="error">
+                            <input type="number" formControlName="id">
+                           
+                            <span *ngIf="!bookForm.get('id').valid && bookForm.get('id').touched" class="error-block">
+                                *Please select an id value
+                            </span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <p>Book name:</p>
+                        <div class="error">
+                            <input type="text" formControlName="bookName">
+                            
+                            <span *ngIf="!bookForm.get('bookName').valid && bookForm.get('bookName').touched"
+                                class="error-block">
+                                *Please enter the name of the book
+                            </span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <p>Author :</p>
+                        <div class="error">
+                            <input type="text" formControlName="author">
+                           
+                            <span *ngIf="!bookForm.get('author').valid && bookForm.get('author').touched"
+                                class="error-block">
+                                *Please enter the name of the author
+                            </span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <p>Book type:</p>
+                        <div class="error">
+                            <input type="text" formControlName="bookType">
+                           
+                            <span *ngIf="!bookForm.get('bookType').valid && bookForm.get('bookType').touched"
+                                class="error-block">
+                                *Please enter the book type
+                            </span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <p>Publish year: </p>
+                        <div class="error">
+                            <input type="number" formControlName="printYear">
+                           
+                            <span *ngIf="!bookForm.get('printYear').valid && bookForm.get('printYear').touched"
+                                class="error-block">
+                                *Please enter the publish year.
+                            </span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="secondsection">
+                    <div class="control">
+                        <p>Publisher:</p>
+                        <div class="error">
+                            <input type="text" formControlName="publisher">
+                           
+                            <span *ngIf="!bookForm.get('publisher').valid && bookForm.get('publisher').touched"
+                                class="error-block">
+                                *Please enter the publisher's name
+                            </span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <p>Number of page: </p>
+                        <div class="error">
+                            <input type="number" formControlName="numberofPages">
+                         
+                            <span *ngIf="!bookForm.get('numberofPages').valid && bookForm.get('numberofPages').touched"
+                                class="error-block">
+                                *Please enter the number of pages
+                            </span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <p>Price: </p>
+                        <div class="error">
+                            <input type="number" formControlName="price">
+                            
+                            <span *ngIf="!bookForm.get('price').valid && bookForm.get('price').touched"
+                                class="error-block">
+                                *Please enter the price of the book
+                            </span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <p>Book image:</p>
+                        <div class="error">
+                            <input type="text" formControlName="image" alt="">
+                            <span *ngIf="!bookForm.get('image').valid && bookForm.get('image').touched"
+                            class="error-block">
+                            *Lütfen bir değer giriniz.
+                        </span>
+                        <span *ngIf="bookForm.get('image').hasError('pattern')" class="error-block">Lütfen geçerli bir değer giriniz.</span>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <p>Description:</p>
+                        <div class="error">
+                            <input type="text" class="desc" formControlName="description">
+                            
+                            <span *ngIf="!bookForm.get('description').valid && bookForm.get('description').touched"
+                                class="error-block">
+                                *Please enter the book description
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <br>
+               
+                <button [disabled]="bookForm.invalid" type="button" (click)="get();" style="display: inline-block;">Add</button>
+            </div>
+           
+
+            <div>
+            
+            </div>
+
+            <!-- <button (click)="add(id.value,bookName.value,author.value,bookType.value,printYear.value,publisher.value,numberofPages.value,price.value,description.value);">Add</button> -->
+        </form>
+     </div>  
+            
+
+     
+    </div>
+    
+</div>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a new book</title>
+</head>
+<body>
+    
+    <main class="addbook">
+        <div class="home">
+            <a routerLink="/" class="homelink">Home</a>
+        </div>
+        <div class="headline"><h1>You can add a new book from here</h1></div>
+
+<br><br>
+<form action="/action_page.php">
+  <label for="bookname">Book name:</label>
+  <input type="text" id="bookname" name="bookname"><br><br>
+  <label for="author">Author's name:</label>
+  <input type="text" id="author" name="author"><br><br>
+  <label for="printyear">Print year:</label>
+  <input type="text" id="printyear" name="printyear"><br><br>
+  <label for="numberofpages">Print year:</label>
+  <input type="text" id="numberofpages" name="numberofpages"><br><br>
+  <label for="bookimage">Book image:</label>
+  <input type="file" id="bookimage" name="bookimage"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>Click the "Submit" button and the book data will be saved into our inventory accordingly.</p>
+    </main>
+
+
+</body>
+</html> -->

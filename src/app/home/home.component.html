@@ -1,0 +1,41 @@
+
+
+<div class="searching">
+
+  <input class="search__input" type="text" placeholder="Search..." [(ngModel)] = "searchText">
+
+  <!-- <input type="text" class="search" placeholder="Search..." [(ngModel)] = "searchText" /> -->
+  
+</div>
+
+        
+        <div id="templatemo_content_right">
+        	<ul class="templatemo_product_box" style="list-style-type: none;">
+                <li *ngFor="let book of mybooks | search : searchText" class="booklist">
+            	<h1 class="bookname">{{book.bookName}}  <span class="author">(by {{book.author}})</span></h1>
+   	      <img class="myimage" src="{{book.image}}" alt=""/>
+                <div class="product_info">
+                	<p class="description">{{book.description}}</p>
+                  <h3 class="price">${{book.price}}</h3>
+                    
+                    <div class="detail_button"><button [routerLink]="['/details', book.id]">Detail</button></div>
+                </div>
+                <div class="cleaner">&nbsp;</div>
+                
+            </li>
+            </ul>
+            
+            <div class="cleaner_with_width">&nbsp;</div>
+            
+
+            
+            <div class="cleaner_with_height">&nbsp;</div>
+       
+        </div> <!-- end of content right -->
+    
+    
+
+
+
+
+

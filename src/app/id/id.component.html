@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book details</title>
+</head>
+
+<body>
+    <style>
+
+      *
+      {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+        span,label{
+            font-size: 20px;
+        }
+
+
+
+        .bookimage
+        {
+          display: flex;
+          justify-content: center;
+        }
+
+    </style>
+  <main class="bookdetails">
+    <br>
+    <nav>    
+      <div class="home">
+        <span></span>
+      <a routerLink="/" class="homelink">< Back to Home Page</a>
+    </div>
+  </nav>
+
+    <br><br>
+    
+    
+    
+    <div class="idcontent" style="display: flex; flex-direction: column;">
+      <div style="text-align: center;">
+        <h3>{{selectedBook.bookName}}</h3>
+      </div>
+      <br><br><br><br>
+      <div class="bookdetail" style="display: flex; justify-content: center;">
+        <div class="bookimage">
+          <img width="50%" src="{{selectedBook.image}}" alt="" class="bookimage">
+        </div>
+        
+        <div class="bookinfo"><br><br>
+
+        <br>
+        <span class="author">
+          <label for="author"  style="font-weight: bold;"></label>
+          <span class="author">{{selectedBook.author}}</span>
+        </span>
+
+        <span class="publisher">
+          <label for="publisher" style="font-weight: bold;"> | </label>
+          <span class="publisher">{{selectedBook.publisher}}</span>
+        </span><br><br>
+        <div class="description" >
+          <label for="description" style="font-weight: bold; font-size: 10px;"></label>
+          <span class="description" style="font-size: 15px;">{{selectedBook.description}}</span>
+        </div><br>
+        <div class="booktype">
+          <label for="booktype" style="font-weight: bold; font-size: 15px;">Type: </label>
+          <span class="bookType" style="font-size: 15px;">{{selectedBook.bookType}}</span>
+        </div><br>
+
+        <div class="printyear">
+          <label for="printyear" style="font-weight: bold; font-size: 15px;">Print Year: </label>
+          <span class="printyear" style="font-size: 15px;">{{selectedBook.printYear}}</span>
+        </div><br>
+        <div class="numberofpages">
+          <label for="numberofpages" style="font-weight: bold; font-size: 15px;">Number of Pages: </label>
+          <span class="numberofpages" style="font-size: 15px;">{{selectedBook.numberofPages}}</span>
+        </div><br>
+        <div class="price">
+          <label for="price" style="font-weight: bold; font-size: 15px;">Price: </label>
+          <span class="price" style="font-size: 15px;">{{selectedBook.price}} $</span>
+        </div>
+      </div>
+    </div></div>
+
+  </main>
+</body>
+
+</html>
