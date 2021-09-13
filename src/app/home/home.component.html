@@ -1,15 +1,24 @@
 
-
+<!-- 
 <div class="searching">
 
   <input class="search__input" type="text" placeholder="Search..." [(ngModel)] = "searchText">
 
-  <!-- <input type="text" class="search" placeholder="Search..." [(ngModel)] = "searchText" /> -->
   
-</div>
+</div> -->
+
+
 
         
         <div id="templatemo_content_right">
+          <div class="wrap">
+            <div class="search">
+               <input type="text" class="searchTerm" placeholder="Search the book you desired" [(ngModel)] = "searchText">
+               <button type="submit" class="searchButton">
+                 <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
         	<ul class="templatemo_product_box" style="list-style-type: none;">
                 <li *ngFor="let book of mybooks | search : searchText" class="booklist">
             	<h1 class="bookname">{{book.bookName}}  <span class="author">(by {{book.author}})</span></h1>

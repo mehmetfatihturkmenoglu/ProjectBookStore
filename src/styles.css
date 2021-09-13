@@ -180,8 +180,8 @@ img {
     width: 170px;
     padding: 10px;
     background-color: #171716;
-    border: 1px solid #212120;
-    margin-top: 3.5%;
+    border: 1px solid #B5B442;
+    margin-top: 1.3%;
 }
 
 #templatemo_content #templatemo_content_right {
@@ -226,8 +226,8 @@ img {
 
 .booklist
 {
-    border: 1px solid #333;
-    border: 1px solid #333;
+   
+    border: 1px solid #BBBA51;
     width: 45%;
     height: 50%;
 }
@@ -436,22 +436,28 @@ button {
 }
 
 .fa {
-	padding: 20px;
-	font-size: 30px;
+	
+	
 	width: -webkit-fill-available;
 	text-align: center;
 	text-decoration: none;
-	margin: 5px 2px;
+
 	
   }
   .fa-facebook {
 	background: #3B5998;
 	color: white;
+	margin: 5px 2px;
+	padding: 20px;
+	font-size: 30px;
   }  
 
   .fa-twitter {
 	background: #55ACEE;
 	color: white;
+	margin: 5px 2px;
+	padding: 20px;
+	font-size: 30px;
   }
   
 
@@ -459,16 +465,25 @@ button {
   .fa-linkedin {
 	background: #007bb5;
 	color: white;
+	margin: 5px 2px;
+	padding: 20px;
+	font-size: 30px;
   }
   
   .fa-youtube {
 	background: #bb0000;
 	color: white;
+	margin: 5px 2px;
+	padding: 20px;
+	font-size: 30px;
   }
   
   .fa-instagram {
 	background: #125688;
 	color: white;
+	margin: 5px 2px;
+	padding: 20px;
+	font-size: 30px;
   }
 
   .fa:hover {
